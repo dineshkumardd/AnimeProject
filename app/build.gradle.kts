@@ -75,10 +75,7 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.11.0")
     ksp ("com.github.bumptech.glide:ksp:4.14.2")
 
-    // Exoplayer
-    implementation("androidx.media3:media3-exoplayer:1.3.1")
-    implementation("androidx.media3:media3-exoplayer-dash:1.3.1")
-    implementation("androidx.media3:media3-ui:1.3.1")
+
 
 
 }

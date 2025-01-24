@@ -63,7 +63,7 @@ class AnimeViewFragment : Fragment() {
                         fragmentBinding.tvTitleValue.text = animeResponse.data.title
                         fragmentBinding.tvPlotValue.text = animeResponse.data.synopsis
                         fragmentBinding.tvGenreValue.text = genre
-                        //fragmentBinding.tvMcValue.text = animeResponse.data.title_english
+                        fragmentBinding.tvMcValue.text = "NA"
                         fragmentBinding.tvTotalEpiValue.text =
                             animeResponse.data.episodes.toString()
                         fragmentBinding.tvRatingValue.text = animeResponse.data.rating

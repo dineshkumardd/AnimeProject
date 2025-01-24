@@ -15,10 +15,8 @@ import java.io.IOException
 class AnimeViewModel(app:Application, val animeRepository:AnimeRepository) :AndroidViewModel(app) {
 
     val animeList:MutableLiveData<Resource<Anime>> = MutableLiveData()
-    var animeResponse:Anime? = null
 
     val animeDetail:MutableLiveData<Resource<AnimeData>> = MutableLiveData()
-    val animeDetailResponse:AnimeData? = null
 
     init {
         getAllAnime()
@@ -60,14 +58,7 @@ class AnimeViewModel(app:Application, val animeRepository:AnimeRepository) :Andr
         if (response.isSuccessful){
             response.body()?.let {resultResponse->
 
-            if (animeResponse==null){
-                animeResponse = resultResponse
-            }    else{
-                val oldList = animeResponse?.data
-                val newList = resultResponse.data
-                oldList?.addAll(newList)
-            }
-                return Resource.Success(animeResponse?:resultResponse)
+                return Resource.Success(resultResponse)
 
             }
         }
